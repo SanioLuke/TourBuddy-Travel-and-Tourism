@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SummaryBookFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/summary_order_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/order_summary_items" />
+
+    <LinearLayout
+        android:id="@+id/summary_order_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_data"
+            app:lottie_repeatCount="100"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:id="@+id/summary_order_no_data_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_dark"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:text="No Cancellation Process Occurred."
+            android:textColor="@color/light_color"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

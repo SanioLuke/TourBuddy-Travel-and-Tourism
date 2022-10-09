@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Bookingfragment">
+
+    <TextView
+        android:id="@+id/book_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_dark"
+        android:text="Bookings"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/book_main_separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/book_main_title"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DCDCDC" />
+
+    <LinearLayout
+        android:id="@+id/guest_booking_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/book_main_separator"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_booking"
+            app:lottie_repeatCount="100"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_dark"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:text="Please sign up using Email or Google to access the facility of booking !!"
+            android:textColor="@color/light_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/booking_reg_user_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/back_cur_shape"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/poppins_dark"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Sign Up Now"
+            android:textColor="@color/third_white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_booking_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/book_main_separator"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/hotel_anim"
+            app:lottie_repeatCount="100"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_dark"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:text="No Booking Done Yet!!"
+            android:textColor="@color/light_color"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/book_main_container_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/book_main_separator">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/sumary_booking_tablay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/main_color"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/main_color"
+            app:tabTextColor="@color/light_color" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/summary_booking_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/sumary_booking_tablay"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bookfrag_loading_lay"
+        layout="@layout/loading_page"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

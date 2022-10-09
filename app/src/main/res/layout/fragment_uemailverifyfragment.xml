@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.userdetailsfragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ue_btns_lay"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/uemail_anim_skip_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uemail_skip_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/white"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="15dp"
+                    android:text="Skip"
+                    android:textColor="@color/light_color"
+                    android:textSize="17sp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/email_verify"
+                    app:lottie_repeatCount="100"
+                    app:lottie_speed="1" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uemail_anim_skip_lay"
+                android:layout_marginTop="30dp"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/ue_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="Make sure you have entered your Email ID via verification and avoid any malicious activities"
+                    android:textColor="@color/main_color"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/verify_email_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ue_content"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/poppins_dark"
+                    android:maxLines="1"
+                    android:paddingVertical="14dp"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="35dp"
+                    android:text="Verify your email address"
+                    tools:ignore="RtlHardcoded" />
+
+                <ProgressBar
+                    android:id="@+id/ue_prog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ue_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/verifysuccess_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ue_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:gravity="center"
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableLeftCompat="@drawable/ic_check" />
+
+                <Button
+                    android:id="@+id/retry_verify_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/verify_email_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:maxLines="1"
+                    android:text="Resend Mail"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/check_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/verify_email_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:maxLines="1"
+                    android:text="Check Here"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/ue_btns_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/ue_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/dialog_shape"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawableTint="@color/white"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_dark"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/ue_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/dialog_shape"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/poppins_dark"
+            android:text="Previous"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

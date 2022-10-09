@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.toursimapp">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".AllActivities.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ToursimApp">
+        <activity android:name=".AllActivities.FaqActivity"></activity>
+        <activity android:name=".AllActivities.ShowCommentActivity" />
+        <activity android:name=".AllActivities.Inbox_details" />
+        <activity android:name=".AllActivities.OrdersDisplayActivity" />
+        <activity android:name=".AllActivities.OrdersActivity" />
+        <activity android:name=".AllActivities.HotelActivity" />
+        <activity android:name=".AllActivities.MainSettingsActivity" />
+        <activity android:name=".AllActivities.ShowAllActivity" />
+        <activity android:name=".AllActivities.SearchActivity" />
+        <activity android:name=".AllActivities.InnerCategoryActivity" />
+        <activity android:name=".AllActivities.ViewImageActivity" />
+        <activity android:name=".AllActivities.MainPlaceActivity" />
+        <activity android:name=".AllActivities.CategoryActivity" />
+        <activity android:name=".AllActivities.AccountEditActivity" />
+        <activity android:name=".AllActivities.EditProfileActivity" />
+        <activity android:name=".AllActivities.ProfilesettingsActivity" />
+        <activity android:name=".AllActivities.AccountsettingsActivity" />
+        <activity android:name=".AllActivities.ContactActivity" />
+        <activity android:name=".AllActivities.AboutusActivity" />
+        <activity android:name=".AllActivities.TermsCondnActivity" />
+        <activity android:name=".AllActivities.Enterdetails" />
+        <activity android:name=".AllActivities.Noconnection" />
+        <activity android:name=".AllActivities.Logsignactivity" />
+        <activity android:name=".AllActivities.Introsliders" />
+        <activity android:name=".AllActivities.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AllActivities.MainActivity" />
+
+        <receiver android:name=".Adapters.ConnectivityReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBLbeDsCYRqptz-n4ra9CR26UNV0OqK4dk" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

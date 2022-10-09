@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/upper_curve_lay"
+    android:backgroundTint="@color/white_dia"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/back_cur_shape"
+        android:backgroundTint="@color/light_grey" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_dark"
+        android:text="Choose Your Check-In Time"
+        android:textColor="@color/second_black"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_font" />
+
+    <RadioGroup
+        android:id="@+id/checkin_radio_grp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/checkin_morning_radio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/my_red"
+            android:fontFamily="@font/poppins_dark"
+            android:paddingStart="20dp"
+            android:text="08:00 AM"
+            tools:ignore="RtlSymmetry" />
+
+        <RadioButton
+            android:id="@+id/checkin_afternoon_radio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/my_red"
+            android:fontFamily="@font/poppins_dark"
+            android:paddingStart="20dp"
+            android:text="12:00 PM"
+            tools:ignore="RtlSymmetry" />
+
+        <RadioButton
+            android:id="@+id/checkin_night_radio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/my_red"
+            android:fontFamily="@font/poppins_dark"
+            android:paddingStart="20dp"
+            android:text="09:00 PM"
+            tools:ignore="RtlSymmetry" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey_font" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Remember that you would be booking for atleast 1 day / 24 hour duration, less that that time is not given/permitted as of now. And check-in and check-out will be of same time corresponding to the dates that you have chosen."
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/checkin_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/plane_backgrd"
+        android:backgroundTint="@color/second_black"
+        android:fontFamily="@font/poppins_dark"
+        android:padding="10dp"
+        android:text="Save"
+        android:textColor="@color/order_check_in_no"
+        android:textSize="17sp" />
+
+</LinearLayout>

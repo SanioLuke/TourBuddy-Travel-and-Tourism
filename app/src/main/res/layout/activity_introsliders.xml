@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllActivities.Introsliders">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/dotlayout"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" />
+
+        <Button
+            android:id="@+id/slide_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_dark"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#002850"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:drawableLeft="@drawable/ic_arrow_back" />
+
+        <Button
+            android:id="@+id/slide_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_dark"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#002850"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:drawableRight="@drawable/ic_right_arrow" />
+
+        <Button
+            android:id="@+id/slide_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_dark"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Finish"
+            android:textAllCaps="false"
+            android:textColor="#002850"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:drawableRight="@drawable/ic_check" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

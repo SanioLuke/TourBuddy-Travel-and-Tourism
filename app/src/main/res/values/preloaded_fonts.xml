@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amarante</item>
+        <item>@font/poppins_dark</item>
+        <item>@font/poppins</item>
+        <item>@font/poppins_light</item>
+        <item>@font/anaheim</item>
+        <item>@font/jacques_francois_shadow</item>
+    </array>
+</resources>

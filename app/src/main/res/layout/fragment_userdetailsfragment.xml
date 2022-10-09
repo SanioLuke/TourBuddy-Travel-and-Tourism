@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.userdetailsfragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ud_next">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/udetails_skip_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/white"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:letterSpacing="0.1"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="15dp"
+                    android:text="Skip"
+                    android:textColor="@color/light_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/userdanim"
+                    app:lottie_repeatCount="100"
+                    app:lottie_speed="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_dark"
+                    android:gravity="center"
+                    android:text="Please enter these details so that we can understand you more..."
+                    android:textColor="@color/main_color"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccpicker"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        app:ccpDialog_textColor="@color/black"
+                        app:ccp_contentColor="@color/black"
+                        app:ccp_defaultPhoneCode="91"
+                        app:ccp_flagBorderColor="@android:color/transparent"
+                        app:ccp_showNameCode="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_phone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:textColorHint="@color/main_color"
+                        app:boxStrokeColor="@color/main_color"
+                        app:counterEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:drawablePadding="20dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:hint="Contact Number"
+                            android:inputType="phone"
+                            android:maxLength="11" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_dob"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/main_color"
+                    app:boxStrokeColor="@color/main_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawablePadding="20dp"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/poppins_light"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:hint="Date Of Birth"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        tools:ignore="HardcodedText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_dark"
+                    android:text="Your Gender : "
+                    android:textColor="@color/main_color"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:id="@+id/gender_grp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <RadioButton
+                        android:id="@+id/sign_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppins_dark"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="10dp"
+                        android:text="Male"
+                        android:textColor="@drawable/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/sign_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppins_dark"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="10dp"
+                        android:text="Female"
+                        android:textColor="@drawable/text_color" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/ud_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawableTint="@color/white"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_dark"
+        android:paddingVertical="15dp"
+        android:text="Next" />
+
+</RelativeLayout>

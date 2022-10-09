@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_shape"
+    android:backgroundTint="@color/white_dia"
+    android:elevation="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/summary_order_anim"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/booked_anim"
+        app:lottie_repeatCount="0"
+        app:lottie_speed="0.7" />
+
+
+    <TextView
+        android:id="@+id/summary_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summary_order_anim"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_dark"
+        android:text="Your Order has been booked Successfully"
+        android:textAlignment="center"
+        android:textColor="@color/second_black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/summary_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summary_header"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Thank you for booking and please rate and reviews about the booking process."
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/reference_code_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summary_sub_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You ordered Reference ID" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stroke_drawable"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/summary_refernce_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/summary_copy_btn"
+                android:textColor="@color/second_black"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/summary_copy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="5dp"
+                android:src="@drawable/ic_copy"
+                android:tint="@color/main_color" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/summary_ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reference_code_lay"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/poppins_dark"
+        android:padding="10dp"
+        android:text="OK"
+        android:textColor="@color/light_color"
+        android:textSize="17sp" />
+
+</RelativeLayout>

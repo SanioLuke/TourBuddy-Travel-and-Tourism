@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/black_no"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/main_trip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_dark"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingVertical="5dp"
+        android:text="Trip Names"
+        android:textColor="@color/third_white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:drawableTint="@color/second_white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trip_inner_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_trip_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/hinnertripitems" />
+
+</RelativeLayout>

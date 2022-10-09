@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--android:background="#002850"-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_repeatCount="100"
+        app:lottie_speed="1" />
+
+    <TextView
+        android:id="@+id/intro_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lottie_anim"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:paddingHorizontal="30dp"
+        android:text="Header"
+        android:textColor="#004077"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/intro_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_header"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:paddingHorizontal="40dp"
+        android:text="Hello, this is the content of the intro-slider"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btm_home"
+        android:icon="@drawable/ic_search"
+        android:title="Explore"
+        app:cnb_iconColor="@color/main_color" />
+
+    <item
+        android:id="@+id/btm_favourites"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorites"
+        app:cnb_iconColor="@android:color/holo_red_light" />
+
+    <item
+        android:id="@+id/btm_booking"
+        android:icon="@drawable/ic_book_online"
+        android:title="Bookings"
+        app:cnb_iconColor="@android:color/holo_green_dark" />
+
+    <item
+        android:id="@+id/btm_inbox"
+        android:icon="@drawable/ic_messages"
+        android:title="Inbox"
+        app:cnb_iconColor="@color/light_color" />
+
+    <item
+        android:id="@+id/btm_profile"
+        android:icon="@drawable/ic_user"
+        android:title="Profile"
+        app:cnb_iconColor="@color/second_black" />
+
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit"><u>EDIT</u></string>
+    <string name="total"><u>Total Price</u></string>
+    <string name="terms_conditions">By checking the checkbox and selecting the Button below, I agree to the Terms And Conditions applied and also agree to pay the total amount shown, which includes, taxes, GST and service charges.</string>
+    <string name="add"><u>ADD</u></string>
+    <string name="des_content"><b>We heard you guys</b>\n\n\n* Updated with new exciting places and resolved bugs.\n\n* We have added more images of places and hotels to excite you and letting you know more about the places visually.\n\n* You can retry the cancelled orders and book the same hotel that you tried to order.\n\n* Settings are added with more usable options (Like clear app cache, notifications, etc).\n\n* The user can download your ordered hotel invoice pdf from the booking summary page.</string>
+    <string name="msg_dialog_txt">Dont forget to fill up the required details !! </string>
+</resources>

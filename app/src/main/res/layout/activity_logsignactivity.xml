@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logsign_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AllActivities.Logsignactivity">
+
+    <RelativeLayout
+        android:id="@+id/form_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/formback4" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_page_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/form_container"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:paddingBottom="30dp"
+        android:text="WELCOME"
+        android:textColor="#004A8A"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/form_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/form_bg"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/upper_curve_lay"
+        android:elevation="35dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/logsign_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/light_color"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/main_color"
+            app:tabTextColor="@color/main_color" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/logsign_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/logsign_tab" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
